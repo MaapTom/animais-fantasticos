@@ -3,7 +3,7 @@ export default class ScrollAnima {
     this.sections = document.querySelectorAll(sections);
     this.windowMetade = window.innerHeight * 0.6;
 
-    this.animaScroll = this.animaScroll.bind(this)
+    this.checkDistance = this.checkDistance.bind(this);
   }
 
   // Pega a distancia de cada item
@@ -35,14 +35,14 @@ export default class ScrollAnima {
     if (this.sections.length) {
       this.getDistance();
       this.checkDistance();
-      window.addEventListener('scroll', this.animaScroll);
+      window.addEventListener('scroll', this.checkDistance);
     }
     return this;
   }
 
   // Remove o evento de scroll
   stop() {
-    window.removeEventListener('scroll', this.animaScroll);
+    window.removeEventListener('scroll', this.checkDistance);
   }
 }
 
