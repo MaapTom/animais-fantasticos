@@ -1,14 +1,16 @@
+/* eslint-disable import/no-named-as-default */
 import ScrollSuave from './modules/scroll-suave.js';
 import Accordion from './modules/accordion.js';
 import TabNav from './modules/tabnav.js';
 import Modal from './modules/modal.js';
 import Tooltip from './modules/tooltip.js';
-import initDate from './modules/date.js';
 import fetchAnimais from './modules/fetch-animais.js';
 import fetchBitCoin from './modules/fetch-bitCoin.js';
 import ScrollAnima from './modules/scroll-anima.js';
 import DropdownMenu from './modules/dropdown-menu.js';
 import MenuMobile from './modules/menu-mobile.js';
+// eslint-disable-next-line import/no-named-as-default-member
+import Funcionamento from './modules/funcionamento.js';
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
@@ -25,7 +27,7 @@ modal.init();
 const tooltip = new Tooltip('[data-tooltip]');
 tooltip.init();
 
-const scrollAnima = new ScrollAnima('[data-anime="scroll"]',);
+const scrollAnima = new ScrollAnima('[data-anime="scroll"]');
 scrollAnima.init();
 
 const dropdownMenu = new DropdownMenu('[data-dropdown]');
@@ -34,7 +36,8 @@ dropdownMenu.init();
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
 
-initDate();
+const funcionamento = new Funcionamento('[data-semana]', 'aberto');
+funcionamento.init();
 
 fetchAnimais('../../animaisapi.json', '.numeros-grid');
 
