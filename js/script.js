@@ -11,6 +11,7 @@ import DropdownMenu from './modules/dropdown-menu.js';
 import MenuMobile from './modules/menu-mobile.js';
 // eslint-disable-next-line import/no-named-as-default-member
 import Funcionamento from './modules/funcionamento.js';
+import SlideNav from './modules/slide.js';
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
@@ -42,3 +43,7 @@ funcionamento.init();
 fetchAnimais('./animaisapi.json', '.numeros-grid');
 
 fetchBitCoin('https://blockchain.info/ticker', '.btc-preco');
+
+const slide = new SlideNav('.slide', '.slide-wrapper');
+slide.init();
+slide.addControl('.custom-control');
