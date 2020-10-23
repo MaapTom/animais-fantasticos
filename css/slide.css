@@ -11,10 +11,10 @@
 .slide {
   display: flex;
 }
-
+/* 
 .slide:hover {
   will-change: transform;
-}
+} */
   
 .slide li {
   flex-shrink: 0;
